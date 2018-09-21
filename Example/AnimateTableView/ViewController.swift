@@ -18,27 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateTable()
-    }
-    
-    // MARK: Private Methods
-    
-    private func animateTable() {
-        tableView.reloadData()
-        
-        let cells = tableView.visibleCells
-        
-        let tableHeight = tableView.bounds.height
-        
-        for cell in cells {
-            cell.transform = CGAffineTransform(translationX: 0.0, y: tableHeight)
-        }
-        
-        for (index, cell) in cells.enumerated() {
-            UIView.animate(withDuration: 0.5, delay: 0.05 * TimeInterval(index), options: [], animations: {
-                cell.transform = CGAffineTransform(translationX: 0.0, y: 0.0)
-            }, completion: nil)
-        }
+        tableView.animate()
     }
 
 }
