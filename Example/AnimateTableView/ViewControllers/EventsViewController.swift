@@ -10,6 +10,8 @@ import UIKit
 
 class EventsViewController: UIViewController {
 
+    fileprivate static let eventCellId = "EventCell"
+    
     // MARK: - Properties
     
     var eventsViewModels: [EventViewModel] = []
@@ -22,6 +24,9 @@ class EventsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let cell =
+        tableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: EventsViewController.eventCellId)
         
         setupEvents()
     }
@@ -48,10 +53,9 @@ extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: EventsViewController.eventCellId, for: indexPath) as! EventTableViewCell
         let eventModel = eventsViewModels[indexPath.row]
-        cell.textLabel?.text = eventModel.title
-        cell.detailTextLabel?.text = eventModel.address
+        cell.eventViewModel = eventModel
         return cell
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1487426215819E300E6257A /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1487425215819E300E6257A /* EventTableViewCell.swift */; };
+		F148742821581BA600E6257A /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F148742721581BA600E6257A /* EventTableViewCell.xib */; };
 		F14E2B70215513350069DE8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E2B6F215513350069DE8E /* AppDelegate.swift */; };
 		F14E2B72215513350069DE8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E2B71215513350069DE8E /* ViewController.swift */; };
 		F14E2B75215513360069DE8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14E2B73215513360069DE8E /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1487425215819E300E6257A /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		F148742721581BA600E6257A /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		F14E2B6C215513350069DE8E /* AnimateTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimateTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14E2B6F215513350069DE8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14E2B71215513350069DE8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1487424215819CA00E6257A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1487425215819E300E6257A /* EventTableViewCell.swift */,
+				F148742721581BA600E6257A /* EventTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F14E2B63215513350069DE8E = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F14E2B8C2155843E0069DE8E /* Models */,
+				F1487424215819CA00E6257A /* Views */,
 				F14E2B86215575D80069DE8E /* ViewControllers */,
 				F14E2B83215521C60069DE8E /* AnimateTableView */,
 				F14E2B89215583380069DE8E /* ViewModels */,
@@ -167,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F148742821581BA600E6257A /* EventTableViewCell.xib in Resources */,
 				F14E2B7A215513370069DE8E /* LaunchScreen.storyboard in Resources */,
 				F14E2B77215513370069DE8E /* Assets.xcassets in Resources */,
 				F14E2B75215513360069DE8E /* Main.storyboard in Resources */,
@@ -184,6 +199,7 @@
 				F14E2B85215521F80069DE8E /* TableViewExtension.swift in Sources */,
 				F14E2B72215513350069DE8E /* ViewController.swift in Sources */,
 				F14E2B88215575FA0069DE8E /* EventsViewController.swift in Sources */,
+				F1487426215819E300E6257A /* EventTableViewCell.swift in Sources */,
 				F14E2B8E2155844B0069DE8E /* Event.swift in Sources */,
 				F14E2B70215513350069DE8E /* AppDelegate.swift in Sources */,
 			);

@@ -10,15 +10,20 @@ import UIKit
 
 class EventTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - Outlet Properties
+    
+    @IBOutlet weak var eventImageView: UIImageView!
+    @IBOutlet weak var eventTitleLabel: UILabel!
+    @IBOutlet weak var eventDetailLabel: UILabel!
+
+    // MARK: - Variables
+    
+    var eventViewModel: EventViewModel! {
+        didSet {
+            eventImageView.image = eventViewModel.thumbnailImage
+            eventTitleLabel.text = eventViewModel.title
+            eventDetailLabel.text = eventViewModel.address
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }

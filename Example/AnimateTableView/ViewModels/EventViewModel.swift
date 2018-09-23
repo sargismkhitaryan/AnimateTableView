@@ -6,7 +6,7 @@
 //  Copyright © 2018 Sargis. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct EventViewModel {
     
@@ -22,6 +22,14 @@ struct EventViewModel {
     
     var address: String {
         return event.address
+    }
+    
+    var thumbnailImage: UIImage? {
+        return UIImage(named: event.image.thumbnail)
+    }
+    
+    var mainImage: UIImage? {
+        return UIImage(named: event.image.main)
     }
     
 }
