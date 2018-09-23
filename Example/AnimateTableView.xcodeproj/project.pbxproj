@@ -13,6 +13,9 @@
 		F14E2B77215513370069DE8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14E2B76215513370069DE8E /* Assets.xcassets */; };
 		F14E2B7A215513370069DE8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14E2B78215513370069DE8E /* LaunchScreen.storyboard */; };
 		F14E2B85215521F80069DE8E /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E2B84215521F80069DE8E /* TableViewExtension.swift */; };
+		F14E2B88215575FA0069DE8E /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E2B87215575FA0069DE8E /* EventsViewController.swift */; };
+		F14E2B8B2155839E0069DE8E /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E2B8A2155839E0069DE8E /* EventViewModel.swift */; };
+		F14E2B8E2155844B0069DE8E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E2B8D2155844B0069DE8E /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F14E2B79215513370069DE8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F14E2B7B215513380069DE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F14E2B84215521F80069DE8E /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		F14E2B87215575FA0069DE8E /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		F14E2B8A2155839E0069DE8E /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		F14E2B8D2155844B0069DE8E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,11 @@
 		F14E2B6E215513350069DE8E /* AnimateTableView */ = {
 			isa = PBXGroup;
 			children = (
+				F14E2B8C2155843E0069DE8E /* Models */,
+				F14E2B86215575D80069DE8E /* ViewControllers */,
 				F14E2B83215521C60069DE8E /* AnimateTableView */,
+				F14E2B89215583380069DE8E /* ViewModels */,
 				F14E2B6F215513350069DE8E /* AppDelegate.swift */,
-				F14E2B71215513350069DE8E /* ViewController.swift */,
 				F14E2B73215513360069DE8E /* Main.storyboard */,
 				F14E2B76215513370069DE8E /* Assets.xcassets */,
 				F14E2B78215513370069DE8E /* LaunchScreen.storyboard */,
@@ -74,6 +82,31 @@
 			);
 			name = AnimateTableView;
 			path = ../../AnimateTableView;
+			sourceTree = "<group>";
+		};
+		F14E2B86215575D80069DE8E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F14E2B71215513350069DE8E /* ViewController.swift */,
+				F14E2B87215575FA0069DE8E /* EventsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F14E2B89215583380069DE8E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F14E2B8A2155839E0069DE8E /* EventViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F14E2B8C2155843E0069DE8E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F14E2B8D2155844B0069DE8E /* Event.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14E2B8B2155839E0069DE8E /* EventViewModel.swift in Sources */,
 				F14E2B85215521F80069DE8E /* TableViewExtension.swift in Sources */,
 				F14E2B72215513350069DE8E /* ViewController.swift in Sources */,
+				F14E2B88215575FA0069DE8E /* EventsViewController.swift in Sources */,
+				F14E2B8E2155844B0069DE8E /* Event.swift in Sources */,
 				F14E2B70215513350069DE8E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
