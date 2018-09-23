@@ -58,7 +58,17 @@ class EventsViewController: UIViewController {
                            address: "London",
                            thumbnailImage: "audience-band-bright-thumbnail.png",
                            mainImage: "audience-band-bright.png")
-        let events = [event1, event2, event3, event4, event5]
+        let event6 = Event(title: "Beach Celebration",
+                           date: Date(),
+                           address: "Jimbaran, Bali",
+                           thumbnailImage: "aisle-beach-celebration-thumbnail.png",
+                           mainImage: "aisle-beach-celebration.png")
+        let event7 = Event(title: "Football Match",
+                           date: Date(),
+                           address: "Barcelona, Spain",
+                           thumbnailImage: "athletes-audience-ball-thumbnail.png",
+                           mainImage: "athletes-audience-ball.png")
+        let events = [event1, event2, event3, event4, event5, event6, event7]
         eventsViewModels = events.map { EventViewModel(event: $0) }
         tableView.animate()
     }
