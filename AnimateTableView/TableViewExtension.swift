@@ -10,15 +10,25 @@ import UIKit
 
 struct TableViewAnimation {
     var duration: Double = 0.5
-    let delay: TimeInterval = 0.05
+    var delay: TimeInterval = 0.05
+    var transform: CGAffineTransform?
+}
+
+extension FloatingPoint {
+    var degreesToRadians: Self { return self * .pi / 180 }
+    var radiansToDegrees: Self { return self * 180 / .pi }
 }
 
 extension UITableView {
     func animate(_ animation: TableViewAnimation = TableViewAnimation()) {
         reloadData()
+
+        guard let trans = animation.transform else {
+            return
+        }
         
         for cell in visibleCells {
-            cell.transform = CGAffineTransform(translationX: 0.0, y: bounds.height)
+            cell.transform = trans
         }
         
         for (index, cell) in visibleCells.enumerated() {
@@ -27,6 +37,8 @@ extension UITableView {
                            options: [],
                            animations: {
                 cell.transform = CGAffineTransform(translationX: 0.0, y: 0.0)
+                cell.transform = CGAffineTransform(rotationAngle: 0)
+                cell.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         }
     }

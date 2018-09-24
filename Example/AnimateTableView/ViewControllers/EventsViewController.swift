@@ -28,6 +28,13 @@ class EventsViewController: UIViewController {
         tableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: EventsViewController.eventCellId)
         
         setupEvents()
+        
+        var animation = TableViewAnimation()
+        animation.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        
+        tableView.animate(animation)
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,7 +84,6 @@ class EventsViewController: UIViewController {
                            mainImage: "athletes-audience-ball.png")
         let events = [event1, event2, event3, event4, event5, event6, event7]
         eventsViewModels = events.map { EventViewModel(event: $0) }
-        tableView.animate()
     }
 
 }

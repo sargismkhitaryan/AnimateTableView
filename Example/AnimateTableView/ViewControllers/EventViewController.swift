@@ -23,7 +23,11 @@ class EventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.animate()
+        
+        var animation = TableViewAnimation()
+        animation.transform = CGAffineTransform(translationX: 0, y: tableView.bounds.height)
+        
+        tableView.animate(animation)
         eventImageView.image = eventView.mainImage
     }
 
