@@ -8,24 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EventViewController: UIViewController {
 
     // MARK: - Outlet Properties
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var eventImageView: UIImageView!
+    
+    // MARK: - Properties
+    
+    var eventView: EventViewModel!
     
     // MARK: Overriden Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.animate()
+        eventImageView.image = eventView.mainImage
     }
 
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension EventViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

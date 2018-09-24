@@ -30,6 +30,13 @@ class EventsViewController: UIViewController {
         setupEvents()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EventSegue" {
+            let vc = segue.destination as! EventViewController
+            vc.eventView = sender as! EventViewModel
+        }
+    }
+    
     // MARK: - Private Methods
     
     private func setupEvents() {
@@ -86,6 +93,11 @@ extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
         let eventModel = eventsViewModels[indexPath.row]
         cell.eventViewModel = eventModel
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewModel = eventsViewModels[indexPath.row]
+        performSegue(withIdentifier: "EventSegue", sender: viewModel)
     }
     
 }
