@@ -18,6 +18,7 @@ class EventViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var eventImageView: UIImageView!
+    @IBOutlet weak var eventBackgroundImageView: UIImageView!
     
     // MARK: - Properties
     
@@ -31,6 +32,7 @@ class EventViewController: UIViewController {
         super.viewDidLoad()
         
         detailsViewModel = EventDetailsViewModel(event: event)
+        eventBackgroundImageView.image = detailsViewModel.image
         
         tableView.register(UINib(nibName: "TitleValueTableViewCell", bundle: nil), forCellReuseIdentifier: EventViewController.titleValueCellId)
         

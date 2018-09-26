@@ -76,9 +76,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Oh-lE-aeU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k2p-oD-VQf">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cT5-gW-lSs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xof-go-9Df">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Oh-lE-aeU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="bRG-QO-1lQ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,8 +114,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="k2p-oD-VQf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7f8-3K-6xB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k2p-oD-VQf" secondAttribute="trailing" id="7zb-2N-E6F"/>
                             <constraint firstItem="5Oh-lE-aeU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EVc-9l-lAF"/>
+                            <constraint firstItem="cT5-gW-lSs" firstAttribute="bottom" secondItem="k2p-oD-VQf" secondAttribute="bottom" id="Mdt-Pa-lSs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Oh-lE-aeU" secondAttribute="bottom" id="Ms7-zN-E64"/>
+                            <constraint firstAttribute="bottom" secondItem="k2p-oD-VQf" secondAttribute="bottom" id="SXe-QJ-WgF"/>
+                            <constraint firstItem="k2p-oD-VQf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YQ1-E6-BGA"/>
+                            <constraint firstItem="cT5-gW-lSs" firstAttribute="trailing" secondItem="k2p-oD-VQf" secondAttribute="trailing" id="bQY-q2-bdG"/>
+                            <constraint firstItem="cT5-gW-lSs" firstAttribute="leading" secondItem="k2p-oD-VQf" secondAttribute="leading" id="cEN-Gb-t2l"/>
+                            <constraint firstItem="cT5-gW-lSs" firstAttribute="top" secondItem="k2p-oD-VQf" secondAttribute="top" id="iBv-8N-RBl"/>
                             <constraint firstItem="5Oh-lE-aeU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kjG-cX-w6b"/>
                             <constraint firstItem="5Oh-lE-aeU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sLg-TG-vds"/>
                         </constraints>
@@ -112,6 +131,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Animated Table View" id="eoh-IE-Exk"/>
                     <connections>
+                        <outlet property="eventBackgroundImageView" destination="k2p-oD-VQf" id="xim-by-XSI"/>
                         <outlet property="eventImageView" destination="QRP-bG-otr" id="1EO-Eu-Qod"/>
                         <outlet property="tableView" destination="5Oh-lE-aeU" id="dgg-aa-bgC"/>
                     </connections>
