@@ -10,6 +10,10 @@ import UIKit
 
 class EventViewController: UIViewController {
 
+    // MARK: - Static Properties
+    
+    fileprivate static let titleValueCellId = "TitleValueCellId"
+    
     // MARK: - Outlet Properties
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,6 +32,8 @@ class EventViewController: UIViewController {
         
         detailsViewModel = EventDetailsViewModel(event: event)
         
+        tableView.register(UINib(nibName: "TitleValueTableViewCell", bundle: nil), forCellReuseIdentifier: EventViewController.titleValueCellId)
+        
         var animation = TableViewAnimation()
         animation.transform = CGAffineTransform(translationX: 0, y: tableView.bounds.height)
         
@@ -43,9 +49,9 @@ extension EventViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: EventViewController.titleValueCellId, for: indexPath) as! TitleValueTableViewCell
         let node = detailsViewModel.nodes[indexPath.row]
-        cell.textLabel?.text = node.value
+        cell.update(title: node.title, value: node.value)
         return cell
     }
 }
