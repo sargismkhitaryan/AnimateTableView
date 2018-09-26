@@ -40,7 +40,10 @@ class EventsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EventSegue" {
             let vc = segue.destination as! EventViewController
-            vc.eventView = sender as! EventViewModel
+            guard let viewModel = sender as? EventViewModel else {
+                fatalError("The type of sender must be EventViewModel")
+            }
+            vc.eventView = viewModel
         }
     }
     
