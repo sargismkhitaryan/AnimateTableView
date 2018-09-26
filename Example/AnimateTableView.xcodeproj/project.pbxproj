@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CBA1EDC215B73BF004FE44C /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA1EDB215B73BF004FE44C /* EventDetailsViewModel.swift */; };
 		F1487426215819E300E6257A /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1487425215819E300E6257A /* EventTableViewCell.swift */; };
 		F148742821581BA600E6257A /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F148742721581BA600E6257A /* EventTableViewCell.xib */; };
 		F14E2B70215513350069DE8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E2B6F215513350069DE8E /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9CBA1EDB215B73BF004FE44C /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 		F1487425215819E300E6257A /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		F148742721581BA600E6257A /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		F14E2B6C215513350069DE8E /* AnimateTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimateTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F14E2B8A2155839E0069DE8E /* EventViewModel.swift */,
+				9CBA1EDB215B73BF004FE44C /* EventDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				F14E2B8B2155839E0069DE8E /* EventViewModel.swift in Sources */,
 				F14E2B85215521F80069DE8E /* TableViewExtension.swift in Sources */,
+				9CBA1EDC215B73BF004FE44C /* EventDetailsViewModel.swift in Sources */,
 				F14E2B72215513350069DE8E /* EventViewController.swift in Sources */,
 				F14E2B88215575FA0069DE8E /* EventsViewController.swift in Sources */,
 				F1487426215819E300E6257A /* EventTableViewCell.swift in Sources */,
