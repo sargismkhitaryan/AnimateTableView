@@ -18,9 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aGY-Ep-Pkx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audience-band-bright" translatesAutoresizingMaskIntoConstraints="NO" id="upD-su-4ai">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ds-1a-fb3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ba1-HO-FtC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aGY-Ep-Pkx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="4si-03-t6c" id="vJf-kj-VYG"/>
                                     <outlet property="delegate" destination="4si-03-t6c" id="yZB-cR-qC3"/>
@@ -30,9 +42,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aGY-Ep-Pkx" firstAttribute="top" secondItem="dol-9k-btx" secondAttribute="top" id="Fa7-c9-K3L"/>
+                            <constraint firstItem="upD-su-4ai" firstAttribute="leading" secondItem="dol-9k-btx" secondAttribute="leading" id="Goi-rc-vhN"/>
+                            <constraint firstAttribute="bottom" secondItem="6Ds-1a-fb3" secondAttribute="bottom" id="KUX-fD-ysN"/>
+                            <constraint firstItem="6Ds-1a-fb3" firstAttribute="top" secondItem="dol-9k-btx" secondAttribute="top" id="VVN-XT-yNZ"/>
+                            <constraint firstItem="dol-9k-btx" firstAttribute="trailing" secondItem="6Ds-1a-fb3" secondAttribute="trailing" id="ZRV-fj-JyA"/>
                             <constraint firstItem="aGY-Ep-Pkx" firstAttribute="leading" secondItem="dol-9k-btx" secondAttribute="leading" id="aCG-3V-K2F"/>
                             <constraint firstItem="dol-9k-btx" firstAttribute="bottom" secondItem="aGY-Ep-Pkx" secondAttribute="bottom" id="afO-4w-ybq"/>
+                            <constraint firstItem="dol-9k-btx" firstAttribute="trailing" secondItem="upD-su-4ai" secondAttribute="trailing" id="eLE-iY-4U3"/>
                             <constraint firstItem="dol-9k-btx" firstAttribute="trailing" secondItem="aGY-Ep-Pkx" secondAttribute="trailing" id="hXJ-Wy-hTT"/>
+                            <constraint firstItem="upD-su-4ai" firstAttribute="top" secondItem="dol-9k-btx" secondAttribute="top" id="jf7-RD-dSz"/>
+                            <constraint firstItem="6Ds-1a-fb3" firstAttribute="leading" secondItem="dol-9k-btx" secondAttribute="leading" id="lJr-Bq-cWA"/>
+                            <constraint firstAttribute="bottom" secondItem="upD-su-4ai" secondAttribute="bottom" id="yUA-fB-NX3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dol-9k-btx"/>
                     </view>
@@ -105,9 +125,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C5k-2P-rh3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pkx-bm-Xye">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Pkx-bm-Xye">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -121,5 +142,6 @@
     </scenes>
     <resources>
         <image name="aisle-beach-celebration" width="933.33331298828125" height="623"/>
+        <image name="audience-band-bright" width="1666.6666259765625" height="1171"/>
     </resources>
 </document>

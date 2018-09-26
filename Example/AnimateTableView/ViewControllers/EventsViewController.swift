@@ -70,11 +70,6 @@ class EventsViewController: UIViewController {
                            address: "Loc Angeles",
                            thumbnailImage: "audience-celebration-concert-thumbnail.png",
                            mainImage: "audience-celebration-concert.png")
-        let event5 = Event(title: "Band Bright",
-                           date: Date(),
-                           address: "London",
-                           thumbnailImage: "audience-band-bright-thumbnail.png",
-                           mainImage: "audience-band-bright.png")
         let event6 = Event(title: "Beach Celebration",
                            date: Date(),
                            address: "Jimbaran, Bali",
@@ -85,7 +80,7 @@ class EventsViewController: UIViewController {
                            address: "Barcelona, Spain",
                            thumbnailImage: "athletes-audience-ball-thumbnail.png",
                            mainImage: "athletes-audience-ball.png")
-        let events = [event1, event2, event3, event4, event5, event6, event7]
+        let events = [event1, event2, event3, event4, event6, event7]
         eventsViewModels = events.map { EventViewModel(event: $0) }
     }
 
