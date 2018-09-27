@@ -18,20 +18,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-wa-52f">
-                        <rect key="frame" x="96.5" y="8" width="258.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-wa-52f">
+                        <rect key="frame" x="96.5" y="8" width="270.5" height="30"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="1" height="1"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3h-9K-c2K">
                         <rect key="frame" x="96.5" y="43.5" width="268.5" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="o8w-kv-ExA"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="1" height="1"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audience-band-bright-thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="D17-77-E5j">
                         <rect key="frame" x="20" y="8" width="56.5" height="56.5"/>
@@ -43,7 +47,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="D17-77-E5j" firstAttribute="top" secondItem="a0b-N9-o8V" secondAttribute="top" constant="8" id="B50-6o-2Qn"/>
-                    <constraint firstAttribute="trailing" secondItem="cOC-wa-52f" secondAttribute="trailing" constant="20" id="Ili-d9-xyp"/>
+                    <constraint firstAttribute="trailing" secondItem="cOC-wa-52f" secondAttribute="trailing" constant="8" id="Ili-d9-xyp"/>
                     <constraint firstItem="D3h-9K-c2K" firstAttribute="leading" secondItem="D17-77-E5j" secondAttribute="trailing" constant="20" id="RP4-aG-RzY"/>
                     <constraint firstItem="cOC-wa-52f" firstAttribute="leading" secondItem="D17-77-E5j" secondAttribute="trailing" constant="20" id="Sie-zz-a17"/>
                     <constraint firstItem="cOC-wa-52f" firstAttribute="top" secondItem="D17-77-E5j" secondAttribute="top" id="gAH-fR-a7b"/>
