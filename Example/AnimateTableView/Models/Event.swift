@@ -9,14 +9,17 @@
 import Foundation
 
 class Event {
-    
+
+    // MARK: - Properties
+
     var title: String
     var eventDescription: String?
     var date: Date
     var address: String
-    
     var image: (thumbnail: String, main: String)
-    
+
+    // MARK: - Initialization
+
     init(title: String, date: Date, address: String, thumbnailImage: String, mainImage: String) {
         self.title = title
         self.date = date

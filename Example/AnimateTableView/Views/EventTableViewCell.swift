@@ -11,13 +11,13 @@ import UIKit
 class EventTableViewCell: UITableViewCell {
 
     // MARK: - Outlet Properties
-    
+
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventDetailLabel: UILabel!
 
-    // MARK: - Variables
-    
+    // MARK: - Computed variables
+
     var eventViewModel: EventViewModel! {
         didSet {
             eventImageView.image = eventViewModel.thumbnailImage
@@ -25,5 +25,5 @@ class EventTableViewCell: UITableViewCell {
             eventDetailLabel.text = eventViewModel.address
         }
     }
-    
+
 }

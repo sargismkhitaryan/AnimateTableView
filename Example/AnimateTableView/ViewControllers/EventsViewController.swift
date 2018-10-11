@@ -11,19 +11,19 @@ import UIKit
 class EventsViewController: UIViewController {
 
     typealias EventCellType = EventTableViewCell
-    
+
     fileprivate static let eventCellId = "EventCell"
-    
+
     // MARK: - Properties
 
     var eventsViewModels: [EventViewModel] = []
-    
+
     // MARK: - Outlet Properties
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     // MARK: - Overriden Methods
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
