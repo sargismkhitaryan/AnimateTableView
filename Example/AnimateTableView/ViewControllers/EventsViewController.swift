@@ -10,10 +10,12 @@ import UIKit
 
 class EventsViewController: UIViewController {
 
+    typealias EventCellType = EventTableViewCell
+    
     fileprivate static let eventCellId = "EventCell"
     
     // MARK: - Properties
-    
+
     var eventsViewModels: [EventViewModel] = []
     
     // MARK: - Outlet Properties
@@ -24,31 +26,32 @@ class EventsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: EventsViewController.eventCellId)
-        
+
+        let nib = UINib(nibName: "EventTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: EventsViewController.eventCellId)
+
         setupEvents()
-        
+
         var animation = TableViewAnimation()
         animation.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        
+
         tableView.animate(animation)
-        
-        
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EventSegue" {
-            let vc = segue.destination as! EventViewController
+            guard let destinationVC = segue.destination as? EventViewController else {
+                fatalError("The type of destination controller should be EventViewController")
+            }
             guard let event = sender as? Event else {
                 fatalError("The type of sender must be Event")
             }
-            vc.event = event
+            destinationVC.event = event
         }
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func setupEvents() {
         let event1 = Event(title: "Theater",
                            date: Date(),
@@ -87,21 +90,24 @@ class EventsViewController: UIViewController {
 }
 
 extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return eventsViewModels.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: EventsViewController.eventCellId, for: indexPath) as! EventTableViewCell
+        let cellId = EventsViewController.eventCellId
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? EventCellType else {
+            fatalError("The type of cell is false.")
+        }
         let eventModel = eventsViewModels[indexPath.row]
         cell.eventViewModel = eventModel
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewModel = eventsViewModels[indexPath.row]
         performSegue(withIdentifier: "EventSegue", sender: viewModel.event)
     }
-    
+
 }
